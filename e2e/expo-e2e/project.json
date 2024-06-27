@@ -1,0 +1,16 @@
+{
+  "name": "expo-e2e",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "e2e/expo-e2e/src",
+  "implicitDependencies": ["expo"],
+  "targets": {
+    "e2e": {
+      "executor": "@nx/playwright:playwright",
+      "outputs": ["{workspaceRoot}/dist/.playwright/e2e/expo-e2e"],
+      "options": {
+        "config": "e2e/expo-e2e/playwright.config.ts"
+      }
+    }
+  }
+}
