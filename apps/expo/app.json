@@ -13,6 +13,10 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
+    "platforms": [
+      "android",
+      "ios"
+    ],
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -26,10 +30,6 @@
         "backgroundColor": "#FFFFFF"
       },
       "package": "com.acme.app"
-    },
-    "web": {
-      "favicon": "./assets/favicon.png",
-      "bundler": "metro"
     },
     "plugins": []
   }

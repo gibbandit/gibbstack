@@ -59,3 +59,10 @@ cache/
 # Next.js
 .next
 out
+
+# tamagui
+.tamagui
+tamagui.css
+
+# Env
+.env

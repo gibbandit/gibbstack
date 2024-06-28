@@ -3,14 +3,22 @@
   "version": "0.0.1",
   "private": true,
   "dependencies": {
+    "@shopify/react-native-skia": "*",
+    "@shopify/flash-list": "*",
     "@testing-library/jest-native": "*",
     "@testing-library/react-native": "*",
     "metro-config": "*",
+    "react": "*",
     "react-native": "*",
-    "expo": "*",
+    "react-native-gesture-handler": "*",
+    "react-native-mmkv": "*",
+    "react-native-reanimated": "*",
+    "react-native-safe-area-context": "*",
+    "react-native-screens": "*",
     "react-native-svg": "*",
+    "react-native-svg-transformer": "*",
     "react-native-web": "*",
-    "react": "*"
+    "expo": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/expo && cp bun.lockb apps/expo",

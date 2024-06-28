@@ -1,0 +1,8 @@
+{
+  "name": "utils/theme",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/utils/theme",
+  "projectType": "lib",
+  "tags": [],
+  "targets": {}
+}

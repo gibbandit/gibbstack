@@ -1,0 +1,8 @@
+{
+  "name": "features/home",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/features/home/src",
+  "projectType": "lib",
+  "tags": [],
+  "targets": {}
+}

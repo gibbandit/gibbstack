@@ -1,0 +1,8 @@
+{
+  "name": "components/list",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "components/list/src",
+  "projectType": "lib",
+  "tags": [],
+  "targets": {}
+}
