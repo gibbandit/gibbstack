@@ -18,7 +18,8 @@
     "react-native-svg": "*",
     "react-native-svg-transformer": "*",
     "react-native-web": "*",
-    "expo": "*"
+    "expo": "*",
+    "expo-system-ui": "*"
   },
   "scripts": {
     "eas-build-pre-install": "cd ../../ && node tools/scripts/eas-build-pre-install.mjs . apps/expo && cp bun.lockb apps/expo",

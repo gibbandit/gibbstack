@@ -28,6 +28,16 @@
       "@acme/components/ui": ["components/ui"],
       "@acme/components/list": ["components/list/index.ts"]
     },
+    "plugins": [
+      {
+        "name": "@0no-co/graphqlsp",
+        "schema": "libs/graphql/schema.graphql"
+      },
+      {
+        "name": "@nderscore/tamagui-typescript-plugin",
+        "pathToApp": "apps/next"
+      }
+    ]
   },
   "exclude": ["node_modules", "tmp"]
 }

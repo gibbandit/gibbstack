@@ -6,7 +6,6 @@ const { withExpo } = require('@expo/next-adapter');
 const { withTamagui } = require('@tamagui/next-plugin');
 const MillionLint = require('@million/lint');
 
-
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
  **/
@@ -32,11 +31,11 @@ const nextConfig = {
     forceSwcTransforms: true,
     swcTraceProfiling: true,
     webpackBuildWorker: true,
+    serverComponentsExternalPackages: ['@whatwg-node'],
   },
 };
 
-const withMillion = MillionLint.next({ });
-
+const withMillion = MillionLint.next({ rsc: true });
 
 const plugins = [
   // Add more Next.js plugins to this list if needed.

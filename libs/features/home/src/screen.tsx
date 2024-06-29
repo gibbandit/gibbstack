@@ -3,7 +3,6 @@ import { Suspense } from 'react';
 import { View, Text, Spinner } from 'tamagui';
 import { graphql } from '@acme/graphql';
 import { useQuery } from '@acme/urql';
-import { useRootTheme } from 'libs/provider/src/theme';
 
 export function HomeScreen() {
   return (

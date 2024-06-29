@@ -1,3 +1,5 @@
+import 'raf/polyfill';
+
 if (typeof requestAnimationFrame === 'undefined') {
   if (typeof setImmediate !== 'undefined') {
     globalThis.requestAnimationFrame = setImmediate;
@@ -58,9 +60,7 @@ const App = ({ children }: React.PropsWithChildren) => {
           }}
         />
         <StylesProvider>
-          <Provider>
-            {children}
-          </Provider>
+          <Provider>{children}</Provider>
         </StylesProvider>
       </body>
     </html>

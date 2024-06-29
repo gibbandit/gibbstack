@@ -8,7 +8,9 @@ module.exports = function (api) {
         {
           config: '../../libs/tamagui-config/src/index.ts',
           components: ['tamagui'],
+          importsWhitelist: ['constants.js', 'colors.js'],
           logTimings: true,
+          disableExtraction: process.env.NODE_ENV === 'development',
         },
       ],
     ],
