@@ -14,28 +14,18 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "strict": true,
     "paths": {
       "@acme/provider": ["libs/provider/src/index.ts"],
-      "@acme/tamagui-config": ["libs/tamagui-config/src/index.ts"],
-      "@acme/utils/theme": ["libs/utils/theme/index.ts"],
-      "@acme/utils/kv": ["libs/utils/kv/index.ts"],
-      "@acme/utils/jotai": ["libs/utils/jotai/src/index.ts"],
-      "@acme/atoms/theme": ["libs/atoms/theme/src/index.ts"],
-      "@acme/features/home": ["libs/features/home/src/index.ts"],
-      "@acme/urql": ["libs/utils/urql/index.ts"],
       "@acme/graphql": ["libs/graphql/src/index.ts"],
-      "@acme/components/ui": ["components/ui"],
-      "@acme/components/list": ["components/list/index.ts"]
+      "@acme/urql": ["libs/utils/urql/index.ts"],
+      "@acme/features/home": ["libs/features/home/src/index.ts"],
+      "@acme/utils/ui": ["libs/utils/ui/src/index.ts"],
+      "@acme/components": ["components/ui/src/index.ts"]
     },
     "plugins": [
       {
         "name": "@0no-co/graphqlsp",
         "schema": "libs/graphql/schema.graphql"
-      },
-      {
-        "name": "@nderscore/tamagui-typescript-plugin",
-        "pathToApp": "apps/next"
       }
     ]
   },

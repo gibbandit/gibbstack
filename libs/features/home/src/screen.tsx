@@ -1,41 +1,36 @@
 'use client';
-import { Suspense } from 'react';
-import { View, Text, Spinner } from 'tamagui';
+
 import { graphql } from '@acme/graphql';
 import { useQuery } from '@acme/urql';
+import { Suspense } from 'react';
+import { Text, Button } from '@acme/components';
+import { View } from 'react-native';
 
 export function HomeScreen() {
-  return (
-    <View
-      width="100%"
-      height="100%"
-      flexGrow={1}
-      gap={32}
-      flexDirection="column"
-      alignItems="center"
-      justifyContent="center"
-    >
-      <Suspense fallback={<Loading />}>
-        <HelloWorld />
-      </Suspense>
-    </View>
-  );
-}
-
-function HelloWorld() {
   const HelloWorldQuery = graphql(`
     query helloWorld {
       greetings
     }
   `);
 
-  const [result] = useQuery({
+  const [result, reexecute] = useQuery({
     query: HelloWorldQuery,
   });
 
-  return <Text>{result.data?.greetings}</Text>;
-}
+  const refresh = () => {
+    reexecute({
+      requestPolicy: 'network-only',
+    });
+  };
 
-function Loading() {
-  return <Spinner color="$green10" />;
+  return (
+    <View className="flex-1 items-center justify-center gap-8">
+      <Suspense>
+        <Text>{result.data?.greetings}</Text>
+      </Suspense>
+      <Button onPress={refresh}>
+        <Text>Refetch</Text>
+      </Button>
+    </View>
+  );
 }

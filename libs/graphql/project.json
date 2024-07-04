@@ -9,9 +9,7 @@
       "sourceRoot": "libs/graphql",
       "executor": "nx:run-commands",
       "options": {
-        "commands": [
-          "bun graphql-codegen --config libs/graphql/src/codegen.ts"
-        ]
+        "commands": ["bun graphql-codegen --config libs/graphql/src/codegen.ts"]
       }
     }
   }

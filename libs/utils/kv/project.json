@@ -1,8 +1,0 @@
-{
-  "name": "utils/kv",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/utils/kv",
-  "projectType": "lib",
-  "tags": [],
-  "targets": {}
-}

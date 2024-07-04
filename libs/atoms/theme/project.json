@@ -1,8 +1,0 @@
-{
-  "name": "atoms/theme",
-  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "libs/atoms/theme/src",
-  "projectType": "lib",
-  "tags": [],
-  "targets": {}
-}

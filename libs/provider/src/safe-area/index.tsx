@@ -1,7 +1,7 @@
 import * as React from 'react';
 import {
   type Metrics,
-  SafeAreaProvider as SafeAreaProviderOg,
+  SafeAreaProvider as SAFE_AREA_PROVIDER,
 } from 'react-native-safe-area-context';
 
 export const initialWindowMetrics: Metrics | null = {
@@ -15,8 +15,8 @@ export const SafeAreaProvider = ({
   children: React.ReactNode;
 }): React.ReactNode => {
   return (
-    <SafeAreaProviderOg initialMetrics={initialWindowMetrics}>
+    <SAFE_AREA_PROVIDER initialMetrics={initialWindowMetrics}>
       {children}
-    </SafeAreaProviderOg>
+    </SAFE_AREA_PROVIDER>
   );
 };

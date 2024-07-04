@@ -56,13 +56,9 @@ npm-debug.*
 web-build/
 cache/
 
+
+e2e/expo-e2e/artifacts
+
 # Next.js
 .next
 out
-
-# tamagui
-.tamagui
-tamagui.css
-
-# Env
-.env

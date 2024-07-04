@@ -10,7 +10,7 @@ const { handleRequest } = createYoga({
     resolvers: {
       Query: {
         greetings: () =>
-          'This is the `greetings` field of the root `Query` type',
+          `it is ${new Date().toLocaleTimeString()} and all is well!`,
       },
     },
   }),

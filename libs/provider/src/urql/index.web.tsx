@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useMemo } from 'react';
+import { useMemo } from 'react';
 import {
   UrqlProvider as URQL_PROVIDER,
   ssrExchange,
@@ -9,7 +9,7 @@ import {
 } from '@urql/next';
 import { cacheExchange } from './exchanges/cacheExchange';
 
-export default function UrqlProvider({ children }: React.PropsWithChildren) {
+export function UrqlProvider({ children }: React.PropsWithChildren) {
   const [client, ssr] = useMemo(() => {
     const ssr = ssrExchange({
       isClient: typeof window !== 'undefined',

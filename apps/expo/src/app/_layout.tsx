@@ -1,42 +1,64 @@
-import { Provider } from '@acme/provider';
-import { useFonts } from 'expo-font';
+import '../../global.css';
+
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { Theme, ThemeProvider, DefaultTheme } from '@react-navigation/native';
 import { SplashScreen, Stack } from 'expo-router';
-import { useEffect } from 'react';
+import { StatusBar } from 'expo-status-bar';
+import * as React from 'react';
+import { NAV_THEME, useColorScheme } from '@acme/utils/ui';
+import { Provider } from '@acme/provider';
+
+const LIGHT_THEME: Theme = {
+  dark: false,
+  colors: NAV_THEME.light,
+};
+const DARK_THEME: Theme = {
+  dark: true,
+  colors: NAV_THEME.dark,
+};
 
 export {
   // Catch any errors thrown by the Layout component.
   ErrorBoundary,
 } from 'expo-router';
 
-// Prevent the splash screen from auto-hiding before asset loading is complete.
+// Prevent the splash screen from auto-hiding before getting the color scheme.
 SplashScreen.preventAutoHideAsync();
 
-export function Home() {
-  const [loaded, error] = useFonts({
-    Inter: require('@tamagui/font-inter/otf/Inter-Medium.otf'),
-    InterBold: require('@tamagui/font-inter/otf/Inter-Bold.otf'),
-  });
+export default function RootLayout() {
+  const { colorScheme, setColorScheme, isDarkColorScheme } = useColorScheme();
+  const [isColorSchemeLoaded, setIsColorSchemeLoaded] = React.useState(false);
 
-  // Expo Router uses Error Boundaries to catch errors in the navigation tree.
-  useEffect(() => {
-    if (error) throw error;
-  }, [error]);
+  React.useEffect(() => {
+    (async () => {
+      const theme = await AsyncStorage.getItem('theme');
+      if (!theme) {
+        AsyncStorage.setItem('theme', colorScheme);
+        setIsColorSchemeLoaded(true);
+        return;
+      }
+      const colorTheme = theme === 'dark' ? 'dark' : 'light';
+      if (colorTheme !== colorScheme) {
+        setColorScheme(colorTheme);
 
-  useEffect(() => {
-    if (loaded) {
+        setIsColorSchemeLoaded(true);
+        return;
+      }
+      setIsColorSchemeLoaded(true);
+    })().finally(() => {
       SplashScreen.hideAsync();
-    }
-  }, [loaded]);
+    });
+  }, [colorScheme, setColorScheme]);
 
-  if (!loaded) {
+  if (!isColorSchemeLoaded) {
     return null;
   }
-
   return (
-    <Provider>
-      <Stack />
-    </Provider>
+    <ThemeProvider value={isDarkColorScheme ? DARK_THEME : LIGHT_THEME}>
+      <StatusBar style={isDarkColorScheme ? 'light' : 'dark'} />
+      <Provider>
+        <Stack />
+      </Provider>
+    </ThemeProvider>
   );
 }
-
-export default Home;
