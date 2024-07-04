@@ -1,5 +1,3 @@
-import { ThemeProvider } from 'next-themes';
-import { StylesProvider } from './styles-provider';
 import '../../global.css';
 import { Provider } from '@acme/provider';
 
@@ -16,16 +14,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <StylesProvider>
-            <Provider>{children}</Provider>
-          </StylesProvider>
-        </ThemeProvider>
+        <Provider>{children}</Provider>
       </body>
     </html>
   );

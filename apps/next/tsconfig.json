@@ -27,6 +27,8 @@
     "../../apps/next/.next/types/**/*.ts",
     "../../dist/apps/next/.next/types/**/*.ts",
     "next-env.d.ts",
+    "nativewind.d.ts",
+    "app-env.d.ts",
     ".next/types/**/*.ts"
   ],
   "exclude": ["node_modules", "jest.config.ts", "**/*.spec.ts", "**/*.test.ts"]

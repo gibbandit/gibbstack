@@ -20,7 +20,10 @@
       "@acme/urql": ["libs/utils/urql/index.ts"],
       "@acme/features/home": ["libs/features/home/src/index.ts"],
       "@acme/utils/ui": ["libs/utils/ui/src/index.ts"],
-      "@acme/components": ["components/ui/src/index.ts"]
+      "@acme/utils/theme": ["libs/utils/theme/index.ts"],
+      "@acme/utils/kv": ["libs/utils/kv/index.ts"],
+      "@acme/components": ["components/ui/src/index.ts"],
+      "@acme/atoms/theme": ["libs/atoms/theme/src/index.ts"]
     },
     "plugins": [
       {
