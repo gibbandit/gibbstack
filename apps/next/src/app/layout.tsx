@@ -1,3 +1,4 @@
+/** @jsxImportSource react */
 import '../../global.css';
 import { Provider } from '@acme/provider';
 

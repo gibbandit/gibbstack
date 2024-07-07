@@ -1,3 +1,4 @@
+'use client';
 import { useColorScheme as useNativewindColorScheme } from 'nativewind';
 
 export function useColorScheme() {

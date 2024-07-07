@@ -22,8 +22,10 @@
       "@acme/utils/ui": ["libs/utils/ui/src/index.ts"],
       "@acme/utils/theme": ["libs/utils/theme/index.ts"],
       "@acme/utils/kv": ["libs/utils/kv/index.ts"],
+      "@acme/utils/safe-area": ["libs/utils/safe-area/src/index.ts"],
       "@acme/components": ["components/ui/src/index.ts"],
-      "@acme/atoms/theme": ["libs/atoms/theme/src/index.ts"]
+      "@acme/atoms/theme": ["libs/atoms/theme/src/index.ts"],
+      "@acme/components/list": ["components/list/index.ts"]
     },
     "plugins": [
       {

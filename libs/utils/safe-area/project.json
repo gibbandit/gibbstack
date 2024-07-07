@@ -1,0 +1,8 @@
+{
+  "name": "utils/safe-area",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "libs/utils/safe-area/src",
+  "projectType": "lib",
+  "tags": [],
+  "targets": {}
+}

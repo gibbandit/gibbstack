@@ -19,8 +19,6 @@ const nextConfig = {
     'react-native',
     'react-native-web',
     'solito',
-    'moti',
-    'react-native-reanimated',
     'react-native-svg',
     'nativewind',
     'react-native-gesture-handler',
